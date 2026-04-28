@@ -3,9 +3,7 @@
 ---
 
 ## Overview  
-Performed a network forensic investigation to analyze packet-level data, identify security risks, and reconstruct attacker activity from captured traffic. This project demonstrates how sensitive information can be exposed in transit and how attackers can extract credentials and files directly from network communications when encryption is not enforced.
-
-Using packet analysis, log correlation, and behavioral inspection, the investigation uncovers credential exposure, file reconstruction, and suspicious network behavior.
+Performed a network forensic investigation to analyze packet-level data, identify security risks, and reconstruct attacker activity from captured traffic. This project demonstrates how sensitive information can be exposed in transit and how attackers can extract credentials and files directly from network communications when encryption is not enforced. Using packet analysis, log correlation, and behavioral inspection, the investigation uncovers credential exposure, file reconstruction, and suspicious network behavior.
 
 ---
 
