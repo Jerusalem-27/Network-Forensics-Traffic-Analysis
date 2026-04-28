@@ -9,6 +9,58 @@ Using packet analysis, log correlation, and behavioral inspection, the investiga
 
 ---
 
+## Investigation Evidence  
+
+### 1. HTTP Traffic Analysis  
+
+<p align="center">
+  <img src="./evidence/01 - http-traffic-analysis.png" width="800">
+</p>
+
+Analyzed HTTP traffic to identify communication patterns between internal and external systems, confirming unencrypted web activity.
+
+---
+
+### 2. FTP Credential Extraction  
+
+<p align="center">
+  <img src="./evidence/02 - ftp-credentials-extraction.png" width="800">
+</p>
+
+Captured plaintext FTP authentication using TCP stream reconstruction, exposing valid username and password transmitted over the network.
+
+---
+
+### 3. File Reconstruction from Traffic  
+
+<p align="center">
+  <img src="./evidence/03 - file-reconstruction.png" width="800">
+</p>
+
+Reconstructed transferred file directly from packet capture, demonstrating how attackers can recover sensitive data from network traffic.
+
+---
+
+### 4. Firewall Log Analysis  
+
+<p align="center">
+  <img src="./evidence/04 - firewall-log-analysis.png" width="800">
+</p>
+
+Analyzed pfSense firewall logs to validate network behavior and identify blocked and allowed traffic patterns.
+
+---
+
+### 5. Routing & Traffic Path Analysis  
+
+<p align="center">
+  <img src="./evidence/05 - routing-analysis.png" width="800">
+</p>
+
+Reviewed routing table configuration and identified static route influencing traffic flow toward external systems.
+
+---
+
 ## Detection Logic Summary  
 
 The detection logic focuses on identifying insecure data transmission, credential exposure, and suspicious network behavior through packet analysis and log correlation.
@@ -23,6 +75,7 @@ The detection logic focuses on identifying insecure data transmission, credentia
 
 This approach enables early identification of insecure communication, potential data leakage, and network misconfigurations that could be exploited by attackers.
 
+---
 
 ## Attack Scenario  
 An attacker gains visibility into network traffic through packet capture or a Man-in-the-Middle position.
@@ -129,13 +182,11 @@ Without encryption and proper network controls, this allows credential theft and
 ---
  ## Why This Project Matters  
 
-Unencrypted network traffic remains a critical security risk in many environments. This project demonstrates how attackers can extract credentials and recover sensitive data directly from packet captures when secure protocols are not enforced.  
-It highlights the importance of encryption, network visibility, and log correlation in detecting and preventing data exposure within modern security operations.
+Unencrypted network traffic remains a critical security risk in many environments. This project demonstrates how attackers can extract credentials and recover sensitive data directly from packet captures when secure protocols are not enforced. It highlights the importance of encryption, network visibility, and log correlation in detecting and preventing data exposure within modern security operations.
 
 ## Conclusion  
 
-This investigation demonstrated how insecure protocols, lack of encryption, and weak network visibility can expose sensitive data to interception and analysis. By correlating packet captures, firewall logs, and routing configurations, the analysis provided a complete view of network behavior and uncovered critical risks, including credential exposure and data reconstruction.  
-The findings reinforce the need for secure communication protocols, continuous monitoring, and layered defensive controls to protect data in transit and reduce the risk of compromise.
+This investigation demonstrated how insecure protocols, lack of encryption, and weak network visibility can expose sensitive data to interception and analysis. By correlating packet captures, firewall logs, and routing configurations, the analysis provided a complete view of network behavior and uncovered critical risks, including credential exposure and data reconstruction. The findings reinforce the need for secure communication protocols, continuous monitoring, and layered defensive controls to protect data in transit and reduce the risk of compromise.
 
 ## Disclaimer  
 This project was conducted in a controlled environment using simulated network traffic for defensive security and forensic analysis purposes.
